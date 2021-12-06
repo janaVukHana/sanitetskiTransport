@@ -1,0 +1,336 @@
+/* NOTES: 
+    napravi hamburger menu za velicinu ispod 600px @media
+*/
+
+/* 
+google fonts
+ 'Dancing Script', cursive; 400 700
+ 'Montserrat', sans-serif; 400 400i 700 900
+ 'Ubuntu', sans-serif; 400 700
+ 'Roboto Slab', serif; 400 700 900
+*/
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-weight: 700;
+  color: #fff;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #aad8d3;
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: rgb(70, 70, 70);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  /* or 0? */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-section {
+  background-color: #009dae;
+  color: #fff;
+}
+
+.light-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.inner-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#o-nama,
+#usluge,
+#cenovnik,
+#kontakt,
+#testimonials {
+  padding: 3rem 0;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 3px 3px 5px #009dae;
+}
+
+.nav-logo a img {
+  width: 100px;
+  height: 60px;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.bars {
+  display: none;
+  padding: 1rem;
+  align-self: flex-end;
+}
+
+.bars:hover {
+  background-color: #009dae;
+  cursor: pointer;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links ul li a {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.nav-links ul li a:hover {
+  background-color: #009dae;
+  color: #fff;
+}
+
+/* HEADER */
+
+header {
+  height: 100vh;
+  background-image: url('../img/ambulance_car_1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#heading {
+  position: relative;
+  height: 100vh;
+}
+
+/* O NAMA */
+
+#o-nama span {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(248, 248, 18);
+  padding: 0.2rem 0.5rem;
+}
+
+/* USLUGE */
+
+#usluge .row {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: black;
+  padding: 2rem 1rem;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 4px;
+}
+#usluge .col {
+  width: 58%;
+}
+
+#usluge .row .col:nth-of-type(1) {
+  width: 38%;
+}
+
+#usluge .row .col.order {
+  order: 2;
+}
+
+#usluge span {
+  font-weight: 700;
+}
+
+/* CENOVNIK */
+#cenovnik .row {
+  flex-wrap: wrap;
+}
+#cenovnik .col {
+  width: 48%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffe652;
+  box-shadow: 3px 3px 5px black;
+}
+
+#cenovnik .cena {
+  font-weight: 700;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-img {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.testimonial-img img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+.testimonial-img .image-paragraph {
+  color: black;
+  margin-left: 1rem;
+  align-self: center;
+  justify-content: center;
+}
+
+/* KONTAKT */
+
+#kontakt ul li {
+  color: rgb(70, 70, 70);
+  margin-bottom: 1rem;
+}
+
+/* PARALLAX IMAGE */
+
+.decorative-div {
+  height: 400px;
+  background-image: url('https://media.istockphoto.com/photos/center-of-novi-sad-at-evening-picture-id1058776608?k=20&m=1058776608&s=612x612&w=0&h=E3dmpvVjkeB2ZTc_X3HT2HQ2zAn4UUwb7C4J5vdHq8w=');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* FOOTER */
+footer {
+  padding: 1rem 0;
+}
+
+footer .social-icons ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+footer .social-icons ul li {
+  margin: 0 0.5rem;
+}
+
+footer .social-icons ul li a:hover {
+  /* change this color later */
+  color: #000;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/* JAVA SCRIPT CLASSES */
+
+/* for smooth scrolling */
+.active {
+  background-color: #009dae;
+  color: #fff;
+}
+
+/* @MEDIA RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+  .nav-links ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .inner-container {
+    width: 90%;
+  }
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* napravi hamburger menu latter*/
+  .bars {
+    display: block;
+  }
+  .nav-links ul {
+    display: none;
+  }
+  /* usluge section */
+  #usluge .row {
+    flex-direction: column;
+  }
+  #usluge .col {
+    width: 100% !important;
+  }
+  #usluge .col img {
+    margin-bottom: 1rem;
+  }
+  /* cenovnik section */
+  #cenovnik .col {
+    width: 100%;
+  }
+}
+
+/* unhide test */
