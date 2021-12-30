@@ -109,15 +109,15 @@ unhide();
 window.addEventListener('scroll', unhide);
 
 function unhide() {
-    const border = window.innerHeight / 5 * 3;
+    const border = window.innerHeight / 5 * 4;
     boxes.forEach(box => {
-      box.firstElementChild.style.transform = 'translateY(400%)';
+      box.firstElementChild.style.transform = 'translateX(400%)';
       box.firstElementChild.style.transition = '1s transform ease';
         const boxPosition = box.getBoundingClientRect().top;
         if(border > boxPosition) {
-            box.firstElementChild.style.transform = 'translateY(0)';
+            box.firstElementChild.style.transform = 'translateX(0)';
         } else {
-            box.firstElementChild.style.transform = 'translateY(400%)';
+            box.firstElementChild.style.transform = 'translateX(400%)';
         }  
     })
 }
