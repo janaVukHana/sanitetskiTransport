@@ -117,7 +117,7 @@ function unhide() {
         if(border > boxPosition) {
             box.firstElementChild.style.transform = 'translateX(0)';
         } else {
-            box.firstElementChild.style.transform = 'translateX(200%)';
+            box.firstElementChild.style.transform = 'translateX(200%)';  
         }  
     })
 }
